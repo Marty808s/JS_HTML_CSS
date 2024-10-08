@@ -1,0 +1,73 @@
+/* Background */
+.backdrop {
+    background: url("/src/coding_wallpaper.jpg") center;
+    background-size: cover; /* Zajistí, že obrázek pokryje celý prvek */
+    width: 100vw; /* 100 % šířky viewportu */
+    height: 100vh; /* 100 % výšky viewportu */
+    display: flex;
+    justify-content: center;
+    filter: blur(4px);
+    margin: 0; /* Odstraní případné defaultní marginy */
+    padding: 0; /* Odstraní případné paddingy */
+    position: absolute; /* Zajistí, že bude prvek správně umístěn */
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+/* Text */
+.text {
+    font-size: 4em;
+}
+
+
+/* Containers! */
+/* 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+
+body {
+    margin: auto;
+    
+}
+
+.content {
+    position: relative;
+    z-index: 2; /* Vyšší z-index, aby byl nad pozadím */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Aby byl obsah vertikálně a horizontálně centrován */
+    color: white;
+}
+
+.container {
+    margin: auto;
+}
+
+.container-flex {
+    display:flex;
+}
+
+.item-5 {
+    order: 5;
+}
+
+.container-flex-row {
+    flex-direction: row;
+}
+
+
+.container-flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.container-flex-column {
+    flex-direction: column;
+}
+
+.container-flex-column-reverse {
+    flex-direction: column-reverse;
+}
+

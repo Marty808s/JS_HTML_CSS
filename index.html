@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Index Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="backdrop"></div> <!-- Samostatné pozadí -->
+        <div class="content">
+            <h1>Hello!</h1>
+        </div>
+    </div>
+
+    <script>
+        let mov_x = 0;
+        let mov_y = 0;
+    
+        setInterval(function() {
+            mov_x += 0.2;
+            mov_y += 0.5;
+    
+            document.querySelector('.backdrop').style.backgroundPosition = `${mov_x}% ${mov_y}%`;
+        }, 60);
+    </script>
+</body>
+</html>
