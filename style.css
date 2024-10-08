@@ -1,24 +1,113 @@
 /* Background */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
 .backdrop {
-    background: url("/src/coding_wallpaper.jpg") center;
+    background: url("/src/coding_wallpaper2.jpg") center;
     background-size: cover; /* Zajistí, že obrázek pokryje celý prvek */
     width: 100vw; /* 100 % šířky viewportu */
     height: 100vh; /* 100 % výšky viewportu */
     display: flex;
     justify-content: center;
-    filter: blur(4px);
     margin: 0; /* Odstraní případné defaultní marginy */
     padding: 0; /* Odstraní případné paddingy */
-    position: absolute; /* Zajistí, že bude prvek správně umístěn */
+    position: fixed; /* Zajistí, že bude prvek správně umístěn */
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: -1;
 }
 
 
 /* Text */
-.text {
-    font-size: 4em;
+.h1-text {
+    font-size: 2em;;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: white;
+    position: absolute;
+    justify-content: center;
+    top: 5%;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-in;
+}
+
+.h1-text.visible {
+    opacity: 1;
+}
+
+
+/*
+Footer
+*/
+
+footer {
+    display: flex;
+    flex-direction: column; /* Zarovná obsah ve sloupci */
+    align-items: center; /* Horizontálně vycentruje obsah */
+    justify-content: center; /* Vertikálně vycentruje obsah */
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    background-color: rgba(5, 7, 43, 0.5);
+    z-index: 100;
+    padding: 20px 0; /* Přidá horní a spodní odsazení */
+}
+
+.footer-text p {
+    color: white;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    margin: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px; /* Mezera mezi ikonami */
+    margin-top: 10px; /* Odsazení ikon od textu */
+}
+
+.footer-icons a {
+    display: inline;
+}
+
+
+
+/* Header */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    top: 0;
+    background-color: rgba(5, 7, 43, 0.5);
+    padding: 0 20px;
+}
+
+.nav-items ul {
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-items li {
+    display: inline-block;
+    font-family: "Lucida Console", "Courier New", monospace;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    padding: 0 10px;
 }
 
 
@@ -27,19 +116,10 @@
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 */
 
-body {
-    margin: auto;
-    
-}
-
 .content {
     position: relative;
     z-index: 2; /* Vyšší z-index, aby byl nad pozadím */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh; /* Aby byl obsah vertikálně a horizontálně centrován */
-    color: white;
 }
 
 .container {
