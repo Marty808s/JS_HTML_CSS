@@ -181,7 +181,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     border-radius: 10px;
     padding: 20px;
     position: absolute;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;

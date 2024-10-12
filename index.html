@@ -25,10 +25,26 @@
     </div>
 
     <div class="my-medailon">
-        <p>Zdravím,</p>
-        <p>moje jméno je Martin Vlnas, jsem studentem oboru Aplikované infromatiky na UJEP.</p>
+        <p id="medailon-p"></p>
+    
+        <script>
+            var i = 0;
+            var text = "Zdravím, moje jméno je Martin Vlnas, jsem studentem oboru Aplikované informatiky na UJEP.";
+            var speed = 50;
+    
+            function typeWriter() {
+                if (i < text.length) {
+                    document.getElementById("medailon-p").innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+    
+            typeWriter(); // Spustí funkci typeWriter při načtení stránky
+        </script>
+        
     </div>
-
+    
 
     <script>
         let mov_x = 0;
