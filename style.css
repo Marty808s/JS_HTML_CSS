@@ -10,7 +10,7 @@ html, body {
 
 
 .backdrop {
-    background: url("/src/coding_wallpaper2.jpg") center;
+    background: url("/src/coding_wallpaper.jpg") center;
     background-size: cover; /* Zajistí, že obrázek pokryje celý prvek */
     width: 100vw; /* 100 % šířky viewportu */
     height: 100vh; /* 100 % výšky viewportu */
@@ -21,6 +21,7 @@ html, body {
     position: fixed; /* Zajistí, že bude prvek správně umístěn */
     top: 0;
     left: 0;
+    filter: blur(4px);
     z-index: -1;
 }
 

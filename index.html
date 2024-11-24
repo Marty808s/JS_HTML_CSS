@@ -51,8 +51,8 @@
         let mov_y = 0;
 
         setInterval(function() {
-            mov_x += 0.5;
-            mov_y += 1;
+            mov_x += 0.1;
+            mov_y += 0.3;
 
             document.querySelector('.backdrop').style.backgroundPosition = `${mov_x}% ${mov_y}%`;
         }, 60);
